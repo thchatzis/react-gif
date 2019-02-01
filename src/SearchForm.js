@@ -6,7 +6,6 @@ class SearchForm extends Component {
         super(props);
         this.state = {
             value: "",
-            gifList: []
         };
 
         this.handleChange = this.handleChange.bind(this)
@@ -18,9 +17,7 @@ class SearchForm extends Component {
         const self = this;
         axios(`http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${self.state.value}`)
             .then(function (response) {
-                self.setState({
-                    gifList: response.data.data
-                });
+                self.props.onReceiveGifs(response.data.data);
             });
     }
 
