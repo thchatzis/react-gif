@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,22 +6,32 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>React Gifs</h1>
         </header>
+        <SearchForm />
+        <Results />
       </div>
     );
   }
+}
+
+ class SearchForm extends Component {
+   render() {
+     return (
+       <div>
+         <h3>form</h3>
+       </div>
+     )
+   }
+ }
+
+ class Results  extends Component {
+  render() {
+    return (
+      <div>
+        <h3>results</h3>
+      </div>
+    )  }
 }
 
 export default App;
