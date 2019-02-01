@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ""
+            value: "",
+            gifList: []
         };
 
         this.handleChange = this.handleChange.bind(this)
+        this.searchGiphy = this.searchGiphy.bind(this)
     }
 
     searchGiphy(event) {
         event.preventDefault();
+        const self = this;
+        axios(`http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${self.state.value}`)
+            .then(function (response) {
+                self.setState({
+                    gifList: response.data.data
+                });
+            });
     }
 
     handleChange(e) {
@@ -30,7 +40,7 @@ class SearchForm extends Component {
                 type="text"
                 value={this.state.value}
                 onChange={this.handleChange}
-                placeholder="Grand Manolo"
+                placeholder="Awesome gifs ahead"
             />
           </form>
         </div>
