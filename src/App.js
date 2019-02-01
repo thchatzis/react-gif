@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import SearchForm from './SearchForm';
+import Results from './Results';
 
 class App extends Component {
   render() {
@@ -15,23 +17,5 @@ class App extends Component {
   }
 }
 
- class SearchForm extends Component {
-   render() {
-     return (
-       <div>
-         <h3>form</h3>
-       </div>
-     )
-   }
- }
-
- class Results  extends Component {
-  render() {
-    return (
-      <div>
-        <h3>results</h3>
-      </div>
-    )  }
-}
 
 export default App;
