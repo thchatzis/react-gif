@@ -32,13 +32,15 @@ class SearchForm extends Component {
         <div>
           <h3>Search</h3>
 
-          <form onSubmit={this.searchGiphy}>
+          <form onSubmit={this.searchGiphy} className="form">
             <input
                 type="text"
                 value={this.state.value}
                 onChange={this.handleChange}
                 placeholder="Awesome gifs ahead"
+                
             />
+            <button type="button" className="fas fa-search" onClick={this.searchGiphy}></button>
           </form>
         </div>
       )

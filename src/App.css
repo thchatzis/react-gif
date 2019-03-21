@@ -29,3 +29,28 @@
     transform: rotate(360deg);
   }
 }
+
+.form {
+  height: 30px;
+}
+
+.form:focus {
+  outline: none !important;
+}
+
+.fas.fa-search {
+  height: 30px;
+  border: 0px;
+}
+
+.fas.fa-search:hover {
+  cursor: pointer;
+}
+
+.fas.fa-search:active {
+  color: rgb(89, 2, 140);
+}
+
+.fas.fa-search:focus {
+  outline:none;  
+}
